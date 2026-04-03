@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vaibhav Singh - AI & Modern Stack Developer</title>
+
+    <meta name="title" content="Vaibhav Singh - AI & Modern Stack Developer">
+    <meta name="description" content="Vaibhav Singh - Passionate Developer creating intelligent systems, scalable cloud architectures, and modern web applications.">
+    <meta name="keywords" content="Vaibhav Singh, AI Developer, Cloud Native, Full-Stack Developer, Portfolio">
+    <meta name="author" content="Vaibhav Singh">
+
+    <meta property="og:title" content="Vaibhav Singh - AI & Modern Stack Developer">
+    <meta property="og:description" content="Passionate about crafting scalable AI systems and responsive websites.">
+    <meta property="og:image" content="assets/images/vaibhav.png">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vaibhav Singh - AI & Modern Stack Developer">
+    <meta name="twitter:description" content="Passionate about crafting scalable AI systems and responsive websites.">
+    <meta name="twitter:image" content="assets/images/vaibhav.png">
+
+    <link rel="icon" href="assets/images/vj.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap">
+
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preload" href="assets/css/aos.css" as="style" >
+    <link rel="preload" href="assets/css/owl.carousel.min.css" as="style" >
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style" />
+    <link rel="preload" href="assets/css/style.css" as="style" />
+
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ld2h640kif");
+    </script>
+
+    <style>
+        /* Scroll Progress Bar */
+        #scrollPath { position: fixed; top: 0; right: 0; width: 10px; height: 100%; background: rgba(255,255,255,0.05); z-index: 9999; }
+        #progressbar { position: fixed; top: 0; right: 0; width: 10px; background: linear-gradient(to top, #008aff, #00ffe7); z-index: 10000; border-radius: 10px; }
+        
+        /* Custom Cursor */
+        .cursor-dot, .cursor-outline { position: fixed; top: 0; left: 0; transform: translate(-50%, -50%); border-radius: 50%; z-index: 9999; pointer-events: none; }
+        .cursor-dot { width: 8px; height: 8px; background-color: #00ffe7; }
+        .cursor-outline { width: 30px; height: 30px; border: 2px solid #008aff; transition: width 0.2s, height 0.2s; }
+        
+        /* Vertical Timeline */
+        .timeline { position: relative; max-width: 1200px; margin: 0 auto; padding: 40px 0; }
+        .timeline::after { content: ''; position: absolute; width: 4px; background-color: #333; top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+        .timeline-container { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-container::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: #00ffe7; border: 4px solid #1a1a1a; top: 15px; border-radius: 50%; z-index: 1; }
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -10px; }
+        .timeline-content { padding: 20px 30px; background-color: #2a2a2a; position: relative; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .timeline-content h3 { color: #00ffe7; font-size: 1.2rem; }
+        @media screen and (max-width: 600px) {
+            .timeline::after { left: 31px; }
+            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-container::after { left: 21px; }
+            .right { left: 0%; }
+        }
+
+        /* Skill & Tool Category Headers */
+        .skill-category-title { font-size: 1.1rem; color: #aaa; margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; text-align: left; border-bottom: 1px solid #333; padding-bottom: 5px;}
+        
+        /* Github Stats */
+        .github-stats-img { border-radius: 10px; transition: transform 0.3s; width: 100%; }
+        .github-stats-img:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,255,231,0.2); }
+    </style>
+</head>
+
+<body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <div id="scrollPath"></div>
+    <div id="progressbar"></div>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div id="preloader"></div>
+    
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-expand-md">
+            <div class="container">
+                <a href="/" class="navbar-brand logo">
+                    <span><</span>
+                    <span class="logo-name">Vaibhav Singh</span>
+                    <span>/></span>
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarMenu">
+                    <div class="offcanvas-header">
+                        <a href="/" class="offcanvas-title navbar-brand logo" id="offcanvasNavbarMenu" data-aos="fade-down" data-aos-delay="600">
+                            <span><</span>
+                            <span class="logo-name">Vaibhav Singh</span>
+                            <span>/></span>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close Navigation Menu"><i class="bi bi-x toggle-icon"></i></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-underline justify-content-end flex-grow-1">
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="500" data-bs-dismiss="offcanvas"><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="600" data-bs-dismiss="offcanvas"><a href="#about" class="nav-link">About</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="700" data-bs-dismiss="offcanvas" ><a href="#skills" class="nav-link">Skills</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="800" data-bs-dismiss="offcanvas"><a href="#projects" class="nav-link">Projects</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="900" data-bs-dismiss="offcanvas"><a href="#blogs" class="nav-link">Blogs</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="1000" data-bs-dismiss="offcanvas"><a href="#contact" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn border-0" id="switchTheme" data-aos="fade-down" data-aos-delay="600"><i class="bi bi-brightness-high-fill"></i></button>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle Navigation Menu" data-aos="fade-down" data-aos-delay="600"><i class="bi bi-list toggle-icon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">     
+            <div class="row about-content">
+                <div class="col-lg-5 order-lg-2">
+                    <div class="hero-portrait">
+                        <div class="pic" data-aos="fade-up" data-aos-delay="600"></div>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-lg-1 hero-content">
+                    <span class="h3" data-aos="fade-up" data-aos-delay="0">Namasté, I'm</span>
+                    <h1 class="name" data-aos="fade-up" data-aos-delay="200"><span>Vaibhav Singh</h1>
+                    <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase"  data-aos="fade-up" data-aos-delay="400"><i class="bi bi-robot"></i> AI & Platform Engineer</button>
+                    <p class="tagline mb-3" data-aos="fade-up" data-aos-delay="600">I specialize in Agentic AI Workflows, Cloud-Native architectures, and modern Full-Stack development. From engineering scalable data pipelines to designing robust zero-trust security systems, I build end-to-end intelligent solutions for the modern web.</p>
+                    <div class="social-icons pb-2 pt-2 mb-2">
+                        <a href="https://github.com/vaibhav90singh" target="_blank" class="github" data-aos="fade-up" data-aos-delay="620"><i class="bi bi-github"></i></a>
+                        <a href="" target="_blank" class="twitter-x" data-aos="fade-up" data-aos-delay="640"><i class="bi bi-twitter-x"></i></a>
+                        <a href="" target="_blank" class="instagram" data-aos="fade-up" data-aos-delay="660"><i class="bi bi-instagram"></i></a>
+                        <a href="" target="_blank" class="youtube" data-aos="fade-up" data-aos-delay="680"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/vaibhavsingh001/" target="_blank" class="linkedin" data-aos="fade-up" data-aos-delay="690"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="d-flex call-to-action">
+                        <a href="#contact" data-aos="fade-up" data-aos-delay="700"><button type="button" class="btn me-4 primary-bg-btn"><i class="bi bi-envelope"></i> Contact Me</button></a>
+                        <a href="https://drive.google.com/file/d/1_V6zodzS0ath3N14T6ukWExabCAfDUYB/view?usp=sharing" data-aos="fade-up" data-aos-delay="800"><button type="button" class="btn btn-light secondary-bg-btn">View Resume <i class="bi bi-file-earmark-pdf"></i></button></a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="things-i-love">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Interests</span></h6>
+            <h2 class="section-heading text-center">Things I Love</h2>
+            <div class="row justify-content-center pt-3 gy-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" >
+                    <div class="card h-100">
+                        <div class="circle-container">
+                            <div class="circle"><i class="bi bi-cpu"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Agentic AI Workflows</p>
+                            <p class="card-text">Building intelligent systems that go beyond chat. I leverage LangChain, CrewAI, and RAG architectures to create autonomous agents capable of multi-step reasoning, tool execution, and complex problem-solving using cutting-edge LLMs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" >
+                    <div class="card h-100">
+                        <div class="circle-container">
+                            <div class="circle"><i class="bi bi-cloud-arrow-up"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Cloud Native Engineering</p>
+                            <p class="card-text">Designing highly scalable, self-healing infrastructures. I specialize in multi-cloud strategies, serverless computing, and container orchestration using Kubernetes and Docker, ensuring zero downtime and maximum performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" >
+                    <div class="card h-100">
+                        <div class="circle-container">
+                            <div class="circle"><i class="bi bi-database-check"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">Advanced Data Engineering</p>
+                            <p class="card-text">Data is the fuel for AI. I build robust ETL pipelines and real-time streaming architectures using tools like Kafka and Spark, transforming raw data into actionable insights and maintaining high-performance vector databases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">But who am I?</span></h6>
+            <h2 class="section-heading text-center">About Me</h2>
+            <p class="text-center muted-text mt-3 mb-4">My story in a nutshell ;)</p>
+            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="200">
+                <div class="col-lg-5 about-portrait">
+                    <img src="assets/images/potraitt.jpeg" class="img-fluid pic" alt="About Me Portrait" onerror="this.src='https://via.placeholder.com/400x500?text=Vaibhav+Singh'">
+                </div>
+                <div class="col-lg-7">
+                    <p class="bio">
+                        I completed my Bachelor's in Computer Application from Guru Gobind Singh Indraprastha University (GGSIPU), Delhi. Driven by a deep curiosity for how systems operate at scale, I've evolved my focus toward the modern tech landscape, specifically bridging the gap between Artificial Intelligence and robust Cloud Infrastructure.
+                        <br><br>
+                        During my academic journey, I gained valuable experience through diverse internships. This included a winter internship focused on computational neurology and a summer internship at IBM, where I worked extensively on AI and cloud technologies. I also interned at several prestigious companies such as CodeClause, Let's Grow More, and CodeSoft.
+                        <br><br>
+                        Today, I am passionate about Agentic AI, modern Full-Stack architectures (Next.js/Node), and DevSecOps. Whether it's setting up a Kubernetes cluster, fine-tuning an LLM, or securing APIs with Zero Trust architecture, I thrive on building solutions that are not just functional, but future-proof.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h6 class="text-center mt-5"><span class="btn btn-sm theme-button theme-text">My Journey</span></h6>
+            <h2 class="section-heading text-center">Experience & Education</h2>
+            
+            <div class="timeline mt-5">
+                <div class="timeline-container left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>AI & Cloud Intern @ IBM</h3>
+                        <p class="text-muted small">Summer 2023</p>
+                        <p>Worked extensively on integrating IBM Watson and cloud technologies. Developed scalable AI solutions and learned the fundamentals of enterprise-grade cloud deployments.</p>
+                    </div>
+                </div>
+                <div class="timeline-container right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>Software Automation @ NVIDIA (Taiwan)</h3>
+                        <p class="text-muted small">2022 - 2023</p>
+                        <p>Selected for the software automation team. Contributed to building automated testing pipelines and optimizing internal development workflows.</p>
+                    </div>
+                </div>
+                <div class="timeline-container left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>BCA Graduate @ GGSIPU</h3>
+                        <p class="text-muted small">2020 - 2023</p>
+                        <p>Graduated from Guru Gobind Singh Indraprastha University. Built a strong foundation in computer science, software engineering, and database management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">My Tech Arsenal</span></h6>
+            <h2 class="section-heading text-center">Core Skills</h2>
+            <p class="text-center muted-text mt-3 mb-4">Technologies I use to build scalable, intelligent, and secure systems:</p>
+            
+            <div class="row mt-4">
+                <div class="col-12"><h5 class="skill-category-title">AI & Agentic Workflows</h5></div>
+            </div>
+            <div class="row justify-content-start row-cols-2 row-cols-md-4 row-cols-lg-6 gy-4 skills-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" alt="PyTorch"><p class="skill-name">PyTorch</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"><p class="skill-name">TensorFlow</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><p class="skill-name">Python</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://upload.wikimedia.org/wikipedia/commons/2/22/LangChain_logo.png" alt="LangChain" style="object-fit: contain; filter: drop-shadow(0px 0px 2px white);"><p class="skill-name">LangChain</p></div></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12"><h5 class="skill-category-title">Cloud Native & Infrastructure</h5></div>
+            </div>
+            <div class="row justify-content-start row-cols-2 row-cols-md-4 row-cols-lg-6 gy-4 skills-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"><p class="skill-name">AWS</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes"><p class="skill-name">Kubernetes</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"><p class="skill-name">Docker</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform"><p class="skill-name">Terraform</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"><p class="skill-name">Linux</p></div></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12"><h5 class="skill-category-title">Modern Full-Stack</h5></div>
+            </div>
+            <div class="row justify-content-start row-cols-2 row-cols-md-4 row-cols-lg-6 gy-4 skills-container" data-aos="fade-up" data-aos-delay="300">
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" style="filter: invert(1);" alt="Next.js"><p class="skill-name">Next.js</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React"><p class="skill-name">React 19+</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><p class="skill-name">Node.js</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Golang"><p class="skill-name">Go (Golang)</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"><p class="skill-name">Tailwind CSS</p></div></div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12"><h5 class="skill-category-title">Data Engineering & Storage</h5></div>
+            </div>
+            <div class="row justify-content-start row-cols-2 row-cols-md-4 row-cols-lg-6 gy-4 skills-container" data-aos="fade-up" data-aos-delay="400">
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><p class="skill-name">PostgreSQL</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB"><p class="skill-name">MongoDB</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Kafka"><p class="skill-name">Kafka</p></div></div>
+                <div class="col"><div class="skill"><img class="skill-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis"><p class="skill-name">Redis</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What I Run</span></h6>
+            <h2 class="section-heading text-center">Development Tools</h2>
+            <p class="text-center muted-text mt-3 mb-4">Frameworks, analytics, and security tools I use daily:</p>
+            <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-6 mt-4 gy-4 tools-container" data-aos="fade-down" data-aos-delay="200">
+                <div class="col"><div class="tool"><img class="tool-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="GitHub Actions"><p class="tool-name">GitHub Actions</p></div></div>
+                <div class="col"><div class="tool"><img class="tool-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins"><p class="tool-name">Jenkins</p></div></div>
+                <div class="col"><div class="tool"><img class="tool-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana"><p class="tool-name">Grafana</p></div></div>
+                <div class="col"><div class="tool"><img class="tool-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg" alt="Prometheus"><p class="tool-name">Prometheus</p></div></div>
+                <div class="col"><div class="tool"><img class="tool-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Splunk_logo.svg/1024px-Splunk_logo.svg.png" style="object-fit: contain; padding: 10px; background: white; border-radius: 5px;" alt="Splunk"><p class="tool-name">Splunk</p></div></div>
+                <div class="col"><div class="tool"><img class="tool-image" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VSCode"><p class="tool-name">VS Code</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="github-stats" style="background: rgba(0,0,0,0.2);">
+        <div class="container pb-5 pt-5">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Open Source</span></h6>
+            <h2 class="section-heading text-center">My GitHub Activity</h2>
+            <div class="row justify-content-center mt-4" data-aos="zoom-in">
+                <div class="col-lg-6 mb-3">
+                    <a href="https://github.com/vaibhav90singh" target="_blank">
+                        <img class="github-stats-img" src="https://github-readme-stats.vercel.app/api?username=vaibhav90singh&show_icons=true&theme=radical&hide_border=true&bg_color=1a1a1a" alt="GitHub Stats">
+                    </a>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <a href="https://github.com/vaibhav90singh" target="_blank">
+                        <img class="github-stats-img" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vaibhav90singh&layout=compact&theme=radical&hide_border=true&bg_color=1a1a1a" alt="Top Languages">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What I've done?</span></h6>
+            <h2 class="section-heading text-center">Projects</h2>
+            <div class="row justify-content-center mt-4 gy-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <i class="bi bi-robot fs-1 text-info"></i>
+                                </div>
+                                <div class="col-7 p-0 ms-2">
+                                    <a href="" class="card-title title" target="_blank">FinFraud AI - Anomaly Detection</a>
+                                    <p class="stacks m-0">Python | TensorFlow | Kafka </p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <a href="" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Real-time anomaly detection model that identifies suspicious credit card transactions streaming via Kafka.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <i class="bi bi-cloud-check fs-1 text-success"></i>
+                                </div>
+                                <div class="col-7 p-0 ms-2">
+                                    <a href="" class="card-title title" target="_blank">CloudScale Architecture</a>
+                                    <p class="stacks m-0">AWS | Kubernetes | Terraform</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <a href="" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Automated provisioning of a highly available microservices cluster using Infrastructure as Code.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body ">
+                            <div class="d-flex align-items-center">
+                                <div class="col-2">
+                                    <i class="bi bi-box-seam fs-1 text-warning"></i>
+                                </div>
+                                <div class="col-7 p-0 ms-2">
+                                    <span class="card-title title">Salesforce Lead Engine</span>
+                                    <p class="stacks m-0">Apex | LWC | REST API</p>
+                                </div>
+                                <div class="col-3 align-middle">
+                                    <a href="" class="btn btn-sm primary-bg-btn rounded-5" target="_blank">Visit <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-container">
+                            <p class="description">Intermediate-level Salesforce development integrating external APIs to automate lead generation workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blogs">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Do I Write?</span></h6>
+            <h2 class="section-heading text-center">My Researches</h2>
+            <p class="text-center muted-text mt-3 mb-4">From tech tips to architectural deep dives, here are some written pieces.</p>
+            <div class="row justify-content-center gy-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card article-card p-3 h-100 border border-secondary rounded">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Research</span>
+                            <h6 class="card-title text-light">The Convergence of Neuromorphic Systems & Integration Perspectives</h6>
+                            <p class="card-text description text-muted">Innovative integration framework that combines neuromorphic computing with traditional digital systems.</p>
+                            <a href="" class="text-decoration-none text-info" target="_blank"><span class="read-more">Read PDF <i class="bi bi-file-earmark-pdf"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card article-card p-3 h-100 border border-secondary rounded">                     
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Survey</span>
+                            <h6 class="card-title text-light">Dynamic Network Slicing in 5G: SDN and NFV Integration Architectures</h6>
+                            <p class="card-text description text-muted">Examination of 5G network slicing through the lens of SDN and NFV.</p>
+                            <a href="" class="text-decoration-none text-info" target="_blank"><span class="read-more">Read PDF <i class="bi bi-file-earmark-pdf"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card article-card p-3 h-100 border border-secondary rounded">                     
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Deep Learning</span>
+                            <h6 class="card-title text-light">Advanced Deep Learning Techniques for Image Synthesis</h6>
+                            <p class="card-text description text-muted">Forefront of advanced deep learning methodologies, specifically focusing on the utilization.</p>
+                            <a href="" class="text-decoration-none text-info" target="_blank"><span class="read-more">Read PDF <i class="bi bi-file-earmark-pdf"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" style="background: rgba(0,0,0,0.1); padding: 60px 0;">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">Questions?</span></h6>
+            <h2 class="section-heading text-center">Frequently Asked Questions</h2>
+            <div class="row justify-content-center mt-5" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="accordionFAQ" style="--bs-accordion-bg: transparent; --bs-accordion-color: #fff;">
+                        <div class="accordion-item border-secondary border-bottom">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed shadow-none text-info bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                                    Are you available for freelance projects?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">Yes, I am actively taking on freelance projects, specifically in building AI-integrated web applications and setting up cloud infrastructure. Feel free to drop a message in the contact form below.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-secondary border-bottom">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed shadow-none text-info bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                                    What is your preferred tech stack?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">My go-to stack for modern web apps is Next.js for the frontend, Node.js or Golang for the backend, and PostgreSQL. For AI, I heavily rely on Python, LangChain, and vector databases like Pinecone. Everything is containerized with Docker.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What's next!</span></h6>
+            <h2 class="section-heading text-center">Get In Touch</h2>
+            <p class="text-center muted-text mt-3 mb-4">Interested in working together? (Powered by Firebase)</p>
+            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="500">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <form id="firebase-contact-form">
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" name="subject"  placeholder="Subject *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea style="resize: none;" class="form-control" id="message" name="message" rows="5" placeholder="Your message *" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn primary-bg-btn mt-2" id="submitBtn">
+                                        <span id="btnText">Send Message <i class="bi bi-arrow-up-right"></i></span>
+                                        <div class="spinner-border spinner-border-sm d-none" id="btnLoader" role="status"></div>
+                                    </button>
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <div id="formAlert" class="alert d-none" role="alert"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <p class="text-center copyright-text">Made with <span>Bootstrap, HTML, CSS, JS</span> and a dash of <span class="heart-icon"><i class="bi bi-hearts"></i></span> by <span>Vaibhav</span>.</p>
+        </div>
+    </footer>
+
+    <button class="btn" id="backToTopButton" onclick="scrollToTop()" style="display: none;">
+        <span aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+              </svg>
+        </span>
+    </button>
+
+    <script src="assets/js/aos.js" defer></script>
+    <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/owl.carousel.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Scroll Progress Bar Logic
+            let progressbar = document.getElementById('progressbar');
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function() {
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progressbar.style.height = progressHeight + "%";
+            }
+
+            // 2. Custom Cursor Logic
+            const cursorDot = document.querySelector("[data-cursor-dot]");
+            const cursorOutline = document.querySelector("[data-cursor-outline]");
+            
+            window.addEventListener("mousemove", function (e) {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: "forwards" });
+            });
+        });
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+        // TODO: Replace with your actual Firebase project configuration
+        // Firebase Console -> Project Settings -> General -> Your apps -> Web
+        const firebaseConfig = {
+            apiKey: "AIzaSyYourActualApiKeyHere...",
+            authDomain: "your-project-id.firebaseapp.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project-id.appspot.com",
+            messagingSenderId: "1234567890",
+            appId: "1:1234567890:web:abcdef123456"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Form Handling
+        const contactForm = document.getElementById('firebase-contact-form');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnLoader = document.getElementById('btnLoader');
+        const formAlert = document.getElementById('formAlert');
+
+        if(contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // UI changes: Show loading
+                btnText.classList.add('d-none');
+                btnLoader.classList.remove('d-none');
+                submitBtn.disabled = true;
+                formAlert.className = 'alert d-none'; // reset alert
+
+                // Get values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                try {
+                    // Save to Firestore Database in a collection named "messages"
+                    const docRef = await addDoc(collection(db, "messages"), {
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message,
+                        timestamp: serverTimestamp()
+                    });
+                    
+                    // Success UI
+                    formAlert.className = 'alert alert-success mt-3';
+                    formAlert.innerHTML = `Awesome! Message sent successfully. ID: ${docRef.id}`;
+                    contactForm.reset();
+                } catch (error) {
+                    // Error UI
+                    console.error("Error adding document: ", error);
+                    formAlert.className = 'alert alert-danger mt-3';
+                    formAlert.innerHTML = `Error sending message: ${error.message}`;
+                } finally {
+                    // Reset Button UI
+                    btnText.classList.remove('d-none');
+                    btnLoader.classList.add('d-none');
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
